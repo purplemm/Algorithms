@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코딩테스트 연습장</title>
+    <title>알고리즘</title>
 </head>
 <body>
     <script>
-        let arr = [12, 77, 8, 41, 53, 92, 85];
+        let array = [1, 5, 2, 6, 3, 7, 4];
+        let commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];
 
-        function solution(arr){
-            let answer, min = Number.MAX_SAFE_INTEGER;
-
-            for(let i = 0; i < arr.length; i++){
-               if(arr[i] < min){
-                   min = arr[i];
-               }
+        function solution(array, commands) {
+            var answer = [];
+            
+            for (var i = 0; i < commands.length; i++){
+                let selectedArray = array.slice(commands[i][0] - 1, commands[i][1]);
+                
+                selectedArray.sort((a,b)=>a-b);
+                
+                answer.push(selectedArray[commands[i][2] - 1])
             }
-
-            answer = min;
+            
             return answer;
         }
-                
-        console.log(solution(arr));
+
+        console.log(solution(array, commands));
     </script>
 </body>
 </html>
