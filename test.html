@@ -8,24 +8,80 @@
 </head>
 <body>
     <script>
-        let array = [1, 5, 2, 6, 3, 7, 4];
-        let commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];
+        // 세 수 중 최솟값
+        //  function solution(a, b, c){
+        //     let answer;
 
-        function solution(array, commands) {
-            var answer = [];
-            
-            for (var i = 0; i < commands.length; i++){
-                let selectedArray = array.slice(commands[i][0] - 1, commands[i][1]);
-                
-                selectedArray.sort((a,b)=>a-b);
-                
-                answer.push(selectedArray[commands[i][2] - 1])
+        //     if(a < b) answer = a;
+        //     else answer = b;
+        //     if(answer > c) answer = c;
+
+        //     return answer;
+        // }
+        // console.log(solution(6, 5, 11));
+
+
+        // 삼각형 판별하기       
+        // function solution(a, b, c){
+        //     let answer, maxNum, sumNum;
+        //     sumNum = a + b + c;
+
+        //     if(a > b) maxNum = a;
+        //     else maxNum = b;
+        //     if(maxNum < c) maxNum = c;
+        //     if(sumNum - maxNum < maxNum) answer = 'NO';
+        //     else answer = 'YES';
+
+        //     return answer;
+        // }
+        // console.log(solution(13, 33, 17));
+
+
+        // 연필 개수
+        // function solution(n){
+        //     let answer;
+        //     answer = Math.ceil(n / 12);
+        //     return answer;
+        // }
+        // console.log(solution(25));
+
+
+        // 1부터 n까지 합 출력하기
+        // function solution(n){
+        //     let answer = 0;
+        //     for(let i = 1; i <= n; i++){
+        //         answer = answer + i;
+        //     }
+        //     return answer;
+        // }
+        // console.log(solution(10));
+
+
+        // 최솟값 구하기
+        // function solution(arr){
+        //     let answer, minNum = Number.MAX_SAFE_INTEGER;
+        //     for(let i = 0; i < arr.length; i++){
+        //         if(arr[i] < minNum) minNum = arr[i];
+        //     }
+        //     answer = minNum;
+        //     return answer;
+        // }
+        // let arr = [5, 3, 7, 11, 2, 15, 17];
+        // console.log(solution(arr));
+
+
+        // 홀수
+        function solution(arr){
+            let answer, oddNum, sumNum, minNum;
+            for(let i = 0; i < arr.length; i++){
+                let nmg = arr[i] / 2;
+                if(nmg === 0) 
             }
-            
+            answer = [sumNum, minNum];
             return answer;
         }
-
-        console.log(solution(array, commands));
+        let arr = [12, 77, 38, 41, 53, 92, 85];
+        console.log(solution(arr));
     </script>
 </body>
 </html>
