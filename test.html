@@ -70,18 +70,54 @@
         // console.log(solution(arr));
 
 
-        // 홀수
-        function solution(arr){
-            let answer, oddNum, sumNum, minNum;
-            for(let i = 0; i < arr.length; i++){
-                let nmg = arr[i] / 2;
-                if(nmg === 0) 
+        // 홀수 (예시 답안)
+        // function solution(arr){
+        //     let answer = [];
+        //     let sumNum = 0, minNum = Number.MAX_SAFE_INTEGER;
+
+        //     for(let x of arr){
+        //         if(x % 2 === 1){
+        //             sumNum += x;
+        //             if(x < minNum) minNum = x;
+        //         }
+        //     }
+        //     answer.push(sumNum);
+        //     answer.push(minNum);
+        //     return answer;
+        // }
+        // let arr = [12, 77, 38, 41, 53, 92, 85];
+        // console.log(solution(arr));
+
+        // 홀수 (내 답안)
+        // function solution(arr){
+        //     let answer = [];
+        //     let sumNum = 0, minNum = Number.MAX_SAFE_INTEGER;
+
+        //     for(let i = 0; i < arr.length; i++){
+        //         if(arr[i] % 2 === 1){
+        //             sumNum += arr[i];
+        //             if(arr[i] < minNum) minNum = arr[i];
+        //         }
+        //     }
+
+        //     answer.push(sumNum);
+        //     answer.push(minNum);
+        //     return answer;
+        // }
+        // let arr = [12, 77, 38, 41, 53, 92, 85];
+        // console.log(solution(arr));
+
+
+        // 10부제
+        function solution(date, plateNum){
+            let answer = 0;
+            for(let i = 0; i < plateNum.length; i++){
+                if(plateNum[i] % 10 === date) answer++;
             }
-            answer = [sumNum, minNum];
             return answer;
         }
-        let arr = [12, 77, 38, 41, 53, 92, 85];
-        console.log(solution(arr));
+        let plateNum = [12, 20, 54, 30, 87, 91, 30];
+        console.log(solution(0, plateNum));
     </script>
 </body>
 </html>
