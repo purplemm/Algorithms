@@ -108,16 +108,41 @@
         // console.log(solution(arr));
 
 
-        // 10부제
-        function solution(date, plateNum){
-            let answer = 0;
-            for(let i = 0; i < plateNum.length; i++){
-                if(plateNum[i] % 10 === date) answer++;
-            }
+        // 10부제 (내 답안)
+        // function solution(day, plateNum){
+        //     let answer = 0;
+        //     for(let i = 0; i < plateNum.length; i++){
+        //         if(plateNum[i] % 10 === day) answer++;
+        //     }
+        //     return answer;
+        // }
+        // let day = 0;
+        // let plateNum = [12, 20, 54, 30, 87, 91, 30];
+        // console.log(solution(day, plateNum));
+
+        // 10부제 (예시 답안) 
+        // function solution(day, plateNum){
+        //     let answer = 0;
+        //     for(let x of plateNum){
+        //         if(x % 10 === day) answer++;
+        //     }
+        //     return answer;
+        // }
+        // let day = 0;
+        // let plateNum = [12, 20, 54, 30, 87, 91, 30];
+        // console.log(solution(day, plateNum));
+
+
+        // 일곱 난쟁이
+        function solution(arr){
+            let answer;
+            let sumHeihgt = 0;
+            for(let x of arr) sumHeihgt += x; 
+            console.log(sumHeihgt);
             return answer;
         }
-        let plateNum = [12, 20, 54, 30, 87, 91, 30];
-        console.log(solution(0, plateNum));
+        let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13]
+        console.log(solution(arr));       
     </script>
 </body>
 </html>
