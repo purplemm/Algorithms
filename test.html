@@ -158,23 +158,69 @@
 
 
         // 일곱 난쟁이
-        function solution(arr){
-            let answer = arr;
-            let sum = arr.reduce((sumVal, v)=>sumVal + v, 0);
+        // function solution(arr){
+        //     let answer = arr;
+        //     let sum = arr.reduce((sumVal, v)=>sumVal + v, 0);
 
-            for(let i = 0; i < 8; i++){
-                for(let j = i + 1; j < 9; j++){
-                    if((sum - (arr[i] + arr[j])) === 100){
-                        arr.splice(j, 1);
-                        arr.splice(i, 1);
-                    }
+        //     for(let i = 0; i < 8; i++){
+        //         for(let j = i + 1; j < 9; j++){
+        //             if((sum - (arr[i] + arr[j])) === 100){
+        //                 arr.splice(j, 1);
+        //                 arr.splice(i, 1);
+        //             }
+        //         }
+        //     }
+
+        //     return answer.sort((a, b)=>a - b);
+        // }
+        // let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+        // console.log(solution(arr));
+        // splice() : 첫번째 인자로 시작 인덱스(index), 두번째 인자로 몇개의 값을 삭제할지, 그리고 세번째 인자부터는 추가할 값을 가변 인자로 넘길 수 있으며, 삭제된 값을 담고 있는 배열을 반환합니다.
+
+
+        // A를 #으로
+        // function solution(text){
+        //     // 방법1
+        //     let answer = "";
+
+        //     for(let v of text){
+        //         if(v === "A"){
+        //             answer += "#";
+        //         }else{
+        //             answer += v;
+        //         }
+        //     }
+
+        //     // 방법2
+        //     // let answer = text;
+        //     // answer = answer.replace(/A/g, "#");
+
+        //     return answer;
+        // }
+        // let text = "BANANA";
+        // console.log(solution(text));
+
+
+        // 문자 찾기
+        function solution(text, srchText){
+            // 방법1
+            let answer = 0;
+
+            for(let v of text){
+                if(v === srchText){
+                    answer++;
                 }
             }
 
-            return answer.sort((a, b)=>a - b);
+            // 방법2
+            // let answer = text.split(srchText).length;
+            // return answer - 1;
+
+            return answer;
         }
-        let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
-        console.log(solution(arr));
+        let text = "COMPUTERPROGRAMMING";
+        let srchText = "R"
+        console.log(solution(text, srchText));
     </script>
 </body>
 </html>
