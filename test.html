@@ -202,25 +202,41 @@
 
 
         // 문자 찾기
-        function solution(text, srchText){
-            // 방법1
+        // function solution(text, srchText){
+        //     // 방법1
+        //     let answer = 0;
+
+        //     for(let v of text){
+        //         if(v === srchText){
+        //             answer++;
+        //         }
+        //     }
+
+        //     // 방법2
+        //     // let answer = text.split(srchText).length;
+        //     // return answer - 1;
+
+        //     return answer;
+        // }
+        // let text = "COMPUTERPROGRAMMING";
+        // let srchText = "R"
+        // console.log(solution(text, srchText));
+
+
+        // 대문자 찾기
+        function solution(text){         
             let answer = 0;
-
             for(let v of text){
-                if(v === srchText){
-                    answer++;
-                }
+                //let num=x.charCodeAt();
+                //if(num>=65 && num<=90) answer++;
+                if(v === v.toUpperCase()) answer++; 
             }
-
-            // 방법2
-            // let answer = text.split(srchText).length;
-            // return answer - 1;
 
             return answer;
         }
-        let text = "COMPUTERPROGRAMMING";
-        let srchText = "R"
-        console.log(solution(text, srchText));
+
+        let text = "KoreaTimeGoodAA";
+        console.log(solution(text));
     </script>
 </body>
 </html>
